@@ -1,0 +1,9 @@
+@import "./global.scss";
+
+$Brand-7: var(--Brand-7, #445FE5);
+$Testbgimg: var(--Testbgimg);
+
+@function var-to-rgba($var, $opacity) {
+  $varStr: str-slice($var, 2);
+  @return rgba(var(--#{$varStr}-r),var(--#{$varStr}-g),var(--#{$varStr}-b), $opacity);
+}
